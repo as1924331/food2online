@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>online food </title>
+</head>
+<body>
+    <nav id="navbar">
+        <img src="./logo/a-letter-logo-png-102.png" alt="">
+        <div class="hamburger">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="nav-items">
+                <li class="item item1  medium-text"><a href="#home">home</a></li>
+                <li class="item item2  medium-text"><a href="#our-services">our-services</a></li>
+                <li class="item item3  medium-text"><a href="#ourclints">about-us</a></li>
+                <li class="item item4  medium-text"><a href="#contact-area">contact-us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+    <div class="show-case">
+        <h1 class="medium-text">Lorem ipsum dolor sit amet.</h1>
+        <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, facilis.</p>
+        <button class="btn"><a href="#">order now</a></button>
+    </div>
+    </section>
+    <section id="our-services">
+        <h1 class="medium-text centre-text ourservices-text">
+            our services
+        </h1>
+        <div class="boxes">
+            <div class="box box1">
+                <img src="./img/derwent-park-pizza-5.png" alt="">
+                <h2 class="medium-text centre-text upper-case">order anything</h2>
+                <p class="text centre-text captalized-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, unde?</p>
+            </div>
+            <div class="box box2">
+                <img src="./img/delivery png.png" alt="">
+                <h2 class="medium-text centre-text upper-case">30min delivery</h2>
+                <p class="text centre-text captalized-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, unde?</p>
+            </div>
+            <div class="box box3">
+                <img src="./img/customer-support-5379955-4497571.webp" alt="">
+                <h2 class="medium-text centre-text upper-case">coustomer support</h2>
+                <p class="text centre-text captalized-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, unde?</p>
+            </div>
+        </div>
+    </section>
+    <section id="ourclints">
+        <h1 class="medium-text centre-text upper-case clints-text">
+            our clints
+        </h1>
+        <section class="our-clints">
+            <div class="clints-items">
+                <img src="./logo/11-2-skype-png-hd.png" alt="">
+            </div>
+            <div class="clints-items">
+                <img src="./logo/62834-organization-icons-social-share-computer-grenfell-logo.png" alt="">
+            </div>
+            <div class="clints-items">
+                <img src="./logo/29675-3-allu-arjun-image.png" alt="">
+            </div>
+            <div class="clints-items">
+                <img src="./logo/73768-icons-media-snapchat-computer-social-logo.png" alt="">
+            </div>
+        </section>
+    </section>
+    <section class="contact-us">
+        <h1 class="medium-text centre-text upper-case contact-text">
+            contact us
+        </h1>
+    </section>
+    <section id="contact-area">
+        <form action="/contact" method="post">
+            <div class="form-group">
+                <label for="entername">name</label>
+                <input type="text" id="entername" name="name" placeholder="enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="Enteremail">Email</label>
+                <input type="email" id="Enteremail" name="email" placeholder="enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="number">phone</label>
+                <input type="number" id="number" name="mobileNumber" placeholder="enter your number" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">feedback</label>
+                <textarea name="" id="feedback" name="textarea" placeholder="Write your feedback" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">submit</button>
+        </form>
+    </section>
+    <section>
+        <div class="container">
+            The Time is <span id="time"></span>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="centre-text medium-text captalized-text">
+            copyright &copy; All rights reserved to Aman Singh
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function displayTime(){
+        time= new Date();
+        document.getElementById("time").innerHTML=time;
+    }
+    setInterval(displayTime,1000)
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</body>
+</html>
